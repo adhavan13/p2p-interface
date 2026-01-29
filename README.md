@@ -78,13 +78,13 @@ The system consists of three independent microservices that communicate to proce
 
 ```bash
 # Clone P2P Service
-git clone [github-link-for-p2p-service]
+git clone [https://github.com/adhavan13/p2p-service]
 
 # Clone NPCI Service
-git clone [github-link-for-npci-service]
+git clone [https://github.com/adhavan13/npci-service]
 
 # Clone Bank Service
-git clone [github-link-for-bank-service]
+git clone [https://github.com/adhavan13/bank-A]
 ```
 
 ### 2. Database Setup
