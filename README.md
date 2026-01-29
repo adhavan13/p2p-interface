@@ -2,8 +2,6 @@
 
 A realistic simulation of India's Unified Payments Interface (UPI) architecture, built to understand how distributed payment systems work at scale. This project replicates the core components of the real UPI ecosystem including Payment Service Providers (PSP), NPCI's UPI network layer, and banking services.
 
-![High-Level Architecture](./architecture-diagram.png)
-
 ## 🎯 Project Purpose
 
 This is a **learning-focused project** designed to understand and simulate real-world UPI payment architecture. It demonstrates critical distributed systems concepts including idempotency, transaction safety, fault tolerance, and secure inter-service communication.
@@ -17,7 +15,6 @@ The system consists of three independent microservices that communicate to proce
 - QR code generation and scanning
 - Payment initiation and orchestration
 - Real-time payment notifications via WebSockets
-- User authentication (MPIN)
 
 ### 2. **NPCI UPI Network** - Port 3001
 - Central switching and routing layer
@@ -37,7 +34,6 @@ The system consists of three independent microservices that communicate to proce
 ### 🔒 Production-Grade Security
 - **Hybrid Encryption Model**: AES-256-GCM for data encryption + RSA for key exchange
 - Secure inter-service communication mimicking production security practices
-- MPIN-based user authentication
 
 ### 🔄 Idempotent APIs
 - Retry-safe transaction workflows
@@ -276,7 +272,6 @@ k6 run load-tests/payment-flow.js
 - **End-to-End Encryption**: All inter-service communication is encrypted
 - **RSA Key Exchange**: Secure exchange of AES symmetric keys
 - **AES-256-GCM**: Fast symmetric encryption for payload data
-- **MPIN Authentication**: User authorization before payment
 - **Request Signing**: Prevents tampering of requests in transit
 
 ## 🚧 Known Limitations
@@ -294,7 +289,6 @@ k6 run load-tests/payment-flow.js
 - [ ] Add transaction dispute resolution
 - [ ] Implement rate limiting and throttling
 - [ ] Add comprehensive audit logging
-- [ ] Dashboard for transaction analytics
 - [ ] Support for international payments
 
 ## 📚 References & Learning Resources
@@ -304,28 +298,12 @@ k6 run load-tests/payment-flow.js
 - [Idempotency in Payment Systems](https://stripe.com/docs/api/idempotent_requests)
 - [Database Transaction Isolation Levels](https://www.postgresql.org/docs/current/transaction-iso.html)
 
-## 🤝 Contributing
-
-This is a learning project, but suggestions and improvements are welcome! Feel free to:
-- Open issues for bugs or questions
-- Submit pull requests with enhancements
-- Share your learnings and experiences
-
 ## 📄 License
 
 MIT License - Feel free to use this project for learning purposes.
 
-## 🙏 Acknowledgments
-
-- NPCI for the UPI architecture reference
-- The distributed systems community for patterns and best practices
-- Open source projects that inspired this implementation
-
----
-
 **Note**: This is a simulation project built for educational purposes. It demonstrates concepts of distributed payment systems but should not be used in production environments without significant security hardening and compliance implementations.
 
-## 📞 Contact
 
 For questions or discussions about this project, feel free to reach out via GitHub issues.
 
